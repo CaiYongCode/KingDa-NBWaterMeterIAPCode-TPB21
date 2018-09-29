@@ -1,0 +1,74 @@
+[Stack]
+FillEnabled=0
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnLogOnly=1
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[InterruptLog]
+LogEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+SumEnabled=0
+ShowTimeSum=1
+SumSortOrder=0
+[DataLog]
+LogEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+SumEnabled=0
+ShowTimeSum=1
+[Breakpoints2]
+Count=0
+[Interrupts]
+Enabled=1
+[MemoryMap]
+Enabled=0
+Base=0
+UseAuto=0
+TypeViolation=1
+UnspecRange=1
+ActionState=1
+[Trace1]
+Enabled=0
+ShowSource=1
+[Simulator]
+Freq=16000000
+[DebugChecksum]
+Checksum=1559912956
+[struct_types]
+Fmt0=struct Meter_Parameter_EN-SettleDate	3	0
+Fmt1=struct Meter_Parameter_EN-Temp	3	0
+Fmt2=struct TPB21_Str-ErrorRecord	3	0
+Fmt3=struct TPB21_Str-FailTimes	3	0
+Fmt4=struct TPB21_Str-Reconnect_Times	3	0
+Fmt5=struct TPB21_Str-Report_Bit	3	0
+Fmt6=struct TPB21_Str-Rssi	3	0
+Fmt7=struct Upgrade_Str-PackageNum	3	0
+Fmt8=struct Upgrade_Str-ResultCode	3	0
+Fmt9=struct Upgrade_Str-TimeoutCounter	3	0
+[DataSample]
+LogEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+[Breakpoints]
+Count=0
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[Aliases]
+Count=0
+SuppressDialog=0
+[CallStack]
+ShowArgs=0
+[Disassembly]
+MixedMode=1
+[DebuggerSettings]
+DisableInterruptsWhenStepping=0
