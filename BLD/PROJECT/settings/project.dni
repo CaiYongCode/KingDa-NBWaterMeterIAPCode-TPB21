@@ -38,29 +38,34 @@ ShowSource=1
 [Simulator]
 Freq=16000000
 [DebugChecksum]
-Checksum=725789862
+Checksum=-1022544905
 [CallStack]
 ShowArgs=0
 [Disassembly]
 MixedMode=1
 [struct_types]
-Fmt0=struct TPB21_Str-ErrorRecord	3	0
-Fmt1=struct TPB21_Str-FailTimes	3	0
-Fmt2=struct TPB21_Str-Reconnect_Times	3	0
-Fmt3=struct TPB21_Str-Report_Bit	3	0
-Fmt4=struct TPB21_Str-Rssi	3	0
-Fmt5=struct Upgrade_Str-PackageNum	3	0
-Fmt6=struct Upgrade_Str-ProgramAddr	4	0
-Fmt7=struct Upgrade_Str-ResultCode	3	0
-Fmt8=struct Upgrade_Str-TimeoutCounter	3	0
+Fmt0=struct Error_Connter_Str-Connect	3	0
+Fmt1=struct Error_Connter_Str-Send	3	0
+Fmt2=struct TPB21_Str-ErrorRecord	3	0
+Fmt3=struct TPB21_Str-FailTimes	3	0
+Fmt4=struct TPB21_Str-Reconnect_Times	3	0
+Fmt5=struct TPB21_Str-Report_Bit	3	0
+Fmt6=struct TPB21_Str-Rssi	3	0
+Fmt7=struct Upgrade_Str-PackageNum	3	0
+Fmt8=struct Upgrade_Str-ProgramAddr	4	0
+Fmt9=struct Upgrade_Str-ResultCode	3	0
+Fmt10=struct Upgrade_Str-TimeoutCounter	3	0
 [array_types]
 Fmt0=unsigned char[512]	4	0
+[watch_formats]
+Fmt0={W}42:a	3	0
 [DataSample]
 LogEnabled=0
 GraphEnabled=0
 ShowTimeLog=1
 [Breakpoints]
-Count=0
+Bp0=_ "STD_CODE" "{$PROJ_DIR$\..\USER\src\main.c}.47.3" 1 0 0 0 "" 0 ""
+Count=1
 [Log file]
 LoggingEnabled=_ 0
 LogFile=_ ""

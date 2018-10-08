@@ -59,8 +59,7 @@ void main(void)
   Read_Meter_Parameter();
   Read_ACUM_Flow(ADD_FLOW_ADD,&Cal.Water_Data);         //读取当前累积水量
 
-  TPB21.Report_Bit = 1;
-  TPB21.Start_Process = TPB21_RECONNECT;
+  TPB21_Power_On();
 
   while (1)
   {

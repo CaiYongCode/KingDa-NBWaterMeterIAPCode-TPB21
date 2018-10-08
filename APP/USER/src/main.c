@@ -58,9 +58,9 @@ void main(void)
   Read_Meter_Parameter();                               //读取水表参数
   Read_History_Save_Index();                            //读取历史数据保存索引
   
+  TPB21_Power_On();
 
-  TPB21.Report_Bit = 1;
-  TPB21.Start_Process = TPB21_RECONNECT;
+  
   while (1)
   {
 //    RTC_GetDate(RTC_Format_BIN, &RTC_DateStr);

@@ -38,7 +38,11 @@ ShowSource=1
 [Simulator]
 Freq=16000000
 [DebugChecksum]
-Checksum=1559912956
+Checksum=-213884533
+[CallStack]
+ShowArgs=0
+[Disassembly]
+MixedMode=1
 [struct_types]
 Fmt0=struct Meter_Parameter_EN-SettleDate	3	0
 Fmt1=struct Meter_Parameter_EN-Temp	3	0
@@ -66,9 +70,5 @@ LogFile=_ ""
 [Aliases]
 Count=0
 SuppressDialog=0
-[CallStack]
-ShowArgs=0
-[Disassembly]
-MixedMode=1
 [DebuggerSettings]
 DisableInterruptsWhenStepping=0

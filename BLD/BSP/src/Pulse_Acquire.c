@@ -80,20 +80,14 @@ void ExtiD_Interrupt (void)                        //外中断D
 {
   if(RESET == Cai1 || RESET == Cai2)
   {
-    if(RESET == Cai1 && RESET == Cai2)       //判断磁报警
+    if(Cal.Cal_State == CAL2 && RESET == Cai1) //第1个霍尔触发 且 上次状态为第2个霍尔触发
     {
+      Cal.Cal_State = CAL1;
     }
-    else
+    else if(Cal.Cal_State == CAL1 && RESET == Cai2) //第2个霍尔触发 且 上次状态为第1个霍尔触发
     {
-      if(Cal.Cal_State == CAL2 && RESET == Cai1) //第1个霍尔触发 且 上次状态为第2个霍尔触发
-      {
-        Cal.Cal_State = CAL1;
-      }
-      else if(Cal.Cal_State == CAL1 && RESET == Cai2) //第2个霍尔触发 且 上次状态为第1个霍尔触发
-      {
-        Cal.Water_Data.flow32++;
-        Cal.Cal_State = CAL2;
-      }
+      Cal.Water_Data.flow32++;
+      Cal.Cal_State = CAL2;
     }
   }
   EXTI_ClearITPendingBit (EXTI_IT_PortD);            //清中断标志位
@@ -112,11 +106,10 @@ void Exti0_Interrupt (void)                        //外中断F
 {
   if(RESET == Weak_Up)
   {
-    TPB21.Report_Bit= 1;
     if(TPB21.Start_Process == TPB21_POWER_DOWN)
     {
       MeterParameter.DeviceStatus = RUN;  
-      TPB21.Start_Process = TPB21_RECONNECT;    
+      TPB21_Power_On();   
     }
   }
   EXTI_ClearITPendingBit (EXTI_IT_Pin0);            //清中断标志位
